@@ -1,0 +1,92 @@
+{
+    "id": "4366",
+    "name": "Coupon",
+    "mobile": true,
+    "notes": "Added additional transform to fix rotation origin on OSX",
+    "syntax": 4,
+    "version": 1.02,
+    "style": {
+        "replacements": [
+            {"type":"font", "find": "'Source Sans Pro'", "name": "Primary Font"},
+            {"type":"font", "find": "'Open Sans'", "name": "Secondary Font"},
+            {"type": "color", "find": "#fcffff", "name": "Link Color"},
+            {"type": "color", "find": "#FFA238", "name": "Link Hover Color"},
+            {"type": "color", "find": "#fffffd", "name": "Button Text"},
+            {"type": "color", "find": "#fea906", "name": "Button"},
+            {"type": "color", "find": "#fffffc", "name": "Button Hover Background"},
+            {"type": "color", "find": "#fdffff", "name": "Banner Background (No Image)"},
+            {"type": "color", "find": "#fffffe", "name": "Banner Text"},
+            {"type": "color", "find": "#f2f4f7", "name": "Coupon Background"},
+            {"type": "color", "find": "#aeafb0", "name": "Coupon Border"},
+            {"type": "color", "find": "#000001", "name": "Coupon Text"},
+            {"type": "color", "find": "#fea907", "name": "Coupon Highlight Text"},
+            {"type": "color", "find": "#aeafb1", "name": "Coupon Divider"},
+            {"type": "color", "find": "#fea908", "name": "Coupon Ribbon"},
+            {"type": "color", "find": "#DD9304", "name": "Coupon Ribbon Shadow"},
+            {"type": "color", "find": "#fffeff", "name": "Coupon Ribbon Text"},
+            {"type": "color", "find": "#000002", "name": "Footer Background"},
+            {"type": "color", "find": "#fefefd", "name": "Footer Text Color"},
+            {"type": "color", "find": "#fea905", "name": "Footer Link Underline"}
+        ]
+    },
+    "variables": {
+        "facebookCommentsURL": {
+          "variable": "facebookCommentsURL",
+          "dafault": "http://leadpages.net",
+          "name": "The URL to read and write comments on Facebook."
+        },
+        "facebookShareURL": {
+            "variable": "facebookShareURL",
+            "dafault": "",
+            "name": "The URL to share on Facebook. Leave blank to share the current page."
+        },
+        "twitterShareURL": {
+            "variable": "twitterShareURL",
+            "dafault": "",
+            "name": "The URL to share on Twitter. Leave blank to share the current page."
+        },
+        "googleShareURL": {
+            "variable": "googleShareURL",
+            "dafault": "",
+            "name": "The URL to share on Google+. Leave blank to share the current page."
+        },
+        "linkedInShareURL": {
+            "variable": "linkedInShareURL",
+            "dafault": "",
+            "name": "The URL to share on LinkedIn. Leave blank to share the current page."
+        }
+    },
+    "elements": [
+        {"id": "banner", "name": "Banner", "type": "container"},
+        {"id": "background", "name": "Background Image", "type": "background-image"},
+        {"id": "logo-container", "name": "Logo Container", "type": "container"},
+        {"id": "logo", "name": "Logo", "type": "image-link", "data": { "max-width": 150 } },
+        {"id": "banner-top", "name": "Top", "type": "container"},
+        {"id": "banner-title", "name": "Title", "type": "text"},
+        {"id": "banner-subtitle", "name": "Subtitle", "type": "text"},
+        {"id": "social", "name": "Social Media", "type": "container"},
+        {"id": "twitter", "type": "dynamic", "name": "Twitter Share", "data": { "variables": ["twitterShareURL"] } },
+        {"id": "facebook", "type": "dynamic", "name": "Facebook Share", "data": { "variables": ["facebookShareURL"] } },
+        {"id": "google", "type": "dynamic", "name": "Google+ Share", "data": { "variables": ["googleShareURL"] } },
+        {"id": "linkedin", "type": "dynamic", "name": "LinkedIn Share", "data": { "variables": ["linkedInShareURL"] } },
+        {"id": "banner-coupon", "name": "Coupon", "type": "container"},
+        {"id": "coupon-ribbon-container", "name": "Coupon Ribbon Container", "type": "container"},
+        {"id": "coupon-ribbon", "name": "Text", "type": "text"},
+        {"id": "coupon-left", "name": "Left", "type": "container"},
+        {"id": "coupon-image", "name": "Image", "type": "image", "data": { "max-width": 420 } },
+        {"id": "banner-coupon-mobile-divider", "name": "Mobile-only Divider", "type": "container"},
+        {"id": "coupon-right", "name": "Right", "type": "container"},
+        {"id": "banner-coupon-text-1", "name": "Text #1", "type": "text"},
+        {"id": "banner-coupon-offer", "name": "Offer", "type": "text"},
+        {"id": "banner-coupon-text-2", "name": "Text #2", "type": "text"},
+        {"id": "banner-coupon-divider", "name": "Divider", "type": "container"},
+        {"id": "banner-coupon-text-3", "name": "Text #3", "type": "text"},
+        {"id": "banner-button", "name": "Call to Action", "type": "link", "data": {"href": "#/optin"} },
+        {"id": "banner-bottom", "name": "Bottom", "type": "container"},
+        {"id": "banner-address", "name": "Address", "type": "text"},
+        {"id": "banner-legal", "name": "Legal", "type": "text"},
+        {"id": "footer", "name": "Footer", "type": "container"},
+        {"id": "copyright-text", "name": "Text", "type": "text"}
+    ],
+    "form": {}
+}
